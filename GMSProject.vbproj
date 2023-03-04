@@ -1,0 +1,703 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.CodeAnalysis.Analyzers.3.0.0\build\Microsoft.CodeAnalysis.Analyzers.props" Condition="Exists('packages\Microsoft.CodeAnalysis.Analyzers.3.0.0\build\Microsoft.CodeAnalysis.Analyzers.props')" />
+  <Import Project="packages\Xamarin.Forms.3.4.0.1008975\build\Xamarin.Forms.props" Condition="Exists('packages\Xamarin.Forms.3.4.0.1008975\build\Xamarin.Forms.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7F39D59A-5CAC-49A4-9CC9-D9E40C6F9A80}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>VbProjet.My.MyApplication</StartupObject>
+    <RootNamespace>VbProjet</RootNamespace>
+    <AssemblyName>VbProjet</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>VbProjet.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>VbProjet.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icons8_dumbbell.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FormsControls.Base, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\XForms.Plugin.AnimationNavigationPage.1.0.8\lib\netstandard2.0\FormsControls.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI">
+      <HintPath>I:\PcWonderland.com_Guna_UI_Framework_Ultimate_2\PcWonderland.com_Guna_UI_Framework_Ultimate_2\Guna UI Framework Ultimate v2.0.0.1 Lib-Master\Guna.UI WinForms\.net 4.0\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2">
+      <HintPath>..\DesignTools\PcWonderland.com_Guna_UI_Framework_Ultimate_2\PcWonderland.com_Guna_UI_Framework_Ultimate_2\Guna UI Framework Ultimate v2.0.0.1 Lib-Master\Guna.UI2 WinForms\.net 4.0\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\MaterialSkin.Net4.1.0.0\lib\net40\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.1.1.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis, Version=3.7.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.CodeAnalysis.Common.3.7.0\lib\netstandard2.0\Microsoft.CodeAnalysis.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.VisualBasic, Version=3.7.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.CodeAnalysis.VisualBasic.3.7.0\lib\netstandard2.0\Microsoft.CodeAnalysis.VisualBasic.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.VisualBasic.Workspaces, Version=3.7.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.CodeAnalysis.VisualBasic.Workspaces.3.7.0\lib\netstandard2.0\Microsoft.CodeAnalysis.VisualBasic.Workspaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.Workspaces, Version=3.7.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.CodeAnalysis.Workspaces.Common.3.7.0\lib\netstandard2.0\Microsoft.CodeAnalysis.Workspaces.dll</HintPath>
+    </Reference>
+    <Reference Include="ReactiveAnimation, Version=1.0.26.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\ReactiveAnimation.1.0.26\lib\net45\ReactiveAnimation.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Immutable, Version=1.2.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Collections.Immutable.1.5.0\lib\netstandard2.0\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Composition.AttributedModel, Version=1.0.31.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Composition.AttributedModel.1.0.31\lib\portable-net45+win8+wp8+wpa81\System.Composition.AttributedModel.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Composition.Convention, Version=1.0.31.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Composition.Convention.1.0.31\lib\portable-net45+win8+wp8+wpa81\System.Composition.Convention.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Composition.Hosting, Version=1.0.31.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Composition.Hosting.1.0.31\lib\portable-net45+win8+wp8+wpa81\System.Composition.Hosting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Composition.Runtime, Version=1.0.31.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Composition.Runtime.1.0.31\lib\portable-net45+win8+wp8+wpa81\System.Composition.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Composition.TypedParts, Version=1.0.31.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Composition.TypedParts.1.0.31\lib\portable-net45+win8+wp8+wpa81\System.Composition.TypedParts.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Core, Version=2.2.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Rx-Core.2.2.5\lib\net45\System.Reactive.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Interfaces, Version=2.2.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Rx-Interfaces.2.2.5\lib\net45\System.Reactive.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Linq, Version=2.2.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Rx-Linq.2.2.5\lib\net45\System.Reactive.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.PlatformServices, Version=2.2.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Rx-PlatformServices.2.2.5\lib\net45\System.Reactive.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Windows.Forms, Version=2.2.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Rx-WinForms.2.2.5\lib\net45\System.Reactive.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reflection.Metadata, Version=1.4.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Reflection.Metadata.1.6.0\lib\netstandard2.0\System.Reflection.Metadata.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.4.7.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encoding.CodePages, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Text.Encoding.CodePages.4.5.1\lib\net461\System.Text.Encoding.CodePages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Threading.Tasks.Extensions.4.5.3\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="WinFormAnimation, Version=1.6.0.4, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>packages\WinFormAnimation.1.6.0.4\lib\net40\WinFormAnimation.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Xamarin.Forms.3.4.0.1008975\lib\netstandard2.0\Xamarin.Forms.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Xamarin.Forms.3.4.0.1008975\lib\netstandard2.0\Xamarin.Forms.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Xaml, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Xamarin.Forms.3.4.0.1008975\lib\netstandard2.0\Xamarin.Forms.Xaml.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutSettings.Designer.vb">
+      <DependentUpon>AboutSettings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AboutSettings.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AccountSettings.Designer.vb">
+      <DependentUpon>AccountSettings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AccountSettings.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AttendanceUserControl.Designer.vb">
+      <DependentUpon>AttendanceUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AttendanceUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ExpensesUserControl.Designer.vb">
+      <DependentUpon>ExpensesUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ExpensesUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ExpiredUserControl.Designer.vb">
+      <DependentUpon>ExpiredUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ExpiredUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GeneralSettings.Designer.vb">
+      <DependentUpon>GeneralSettings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralSettings.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LoginRegistryForm.Designer.vb">
+      <DependentUpon>LoginRegistryForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LoginRegistryForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MemberForm.Designer.vb">
+      <DependentUpon>MemberForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MemberForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PackageNoticeUserControl.Designer.vb">
+      <DependentUpon>PackageNoticeUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PackageNoticeUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PackageUserControl.Designer.vb">
+      <DependentUpon>PackageUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PackageUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PaymentForm.Designer.vb">
+      <DependentUpon>PaymentForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RenewalForm.Designer.vb">
+      <DependentUpon>RenewalForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RenewalForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SentControl.Designer.vb">
+      <DependentUpon>SentControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SentControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsForm.Designer.vb">
+      <DependentUpon>SettingsForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShiftUserControl.Designer.vb">
+      <DependentUpon>ShiftUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ShiftUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SMSForm.Designer.vb">
+      <DependentUpon>SMSForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SMSForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaffForm.Designer.vb">
+      <DependentUpon>StaffForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="StaffForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EquipmentsUserControl.Designer.vb">
+      <DependentUpon>EquipmentsUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EquipmentsUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DashBoardUserControl.Designer.vb">
+      <DependentUpon>DashBoardUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DashBoardUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NoticeUserControl.Designer.vb">
+      <DependentUpon>NoticeUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NoticeUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PaymentUserControl.Designer.vb">
+      <DependentUpon>PaymentUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="loginUserControl.Designer.vb">
+      <DependentUpon>loginUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="loginUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Splashscreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Splashscreen.Designer.vb">
+      <DependentUpon>Splashscreen.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mainForm.Designer.vb">
+      <DependentUpon>mainForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="mainForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="staffUserControl.Designer.vb">
+      <DependentUpon>staffUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="staffUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MemberUserControl.Designer.vb">
+      <DependentUpon>MemberUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MemberUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AboutSettings.resx">
+      <DependentUpon>AboutSettings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountSettings.resx">
+      <DependentUpon>AccountSettings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceUserControl.resx">
+      <DependentUpon>AttendanceUserControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpensesUserControl.resx">
+      <DependentUpon>ExpensesUserControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpiredUserControl.resx">
+      <DependentUpon>ExpiredUserControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeneralSettings.resx">
+      <DependentUpon>GeneralSettings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginRegistryForm.resx">
+      <DependentUpon>LoginRegistryForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemberForm.resx">
+      <DependentUpon>MemberForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PackageNoticeUserControl.resx">
+      <DependentUpon>PackageNoticeUserControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PackageUserControl.resx">
+      <DependentUpon>PackageUserControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentForm.resx">
+      <DependentUpon>PaymentForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RenewalForm.resx">
+      <DependentUpon>RenewalForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SentControl.resx">
+      <DependentUpon>SentControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsForm.resx">
+      <DependentUpon>SettingsForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShiftUserControl.resx">
+      <DependentUpon>ShiftUserControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SMSForm.resx">
+      <DependentUpon>SMSForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffForm.resx">
+      <DependentUpon>StaffForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EquipmentsUserControl.resx">
+      <DependentUpon>EquipmentsUserControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DashBoardUserControl.resx">
+      <DependentUpon>DashBoardUserControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NoticeUserControl.resx">
+      <DependentUpon>NoticeUserControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentUserControl.resx">
+      <DependentUpon>PaymentUserControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="loginUserControl.resx">
+      <DependentUpon>loginUserControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Splashscreen.resx">
+      <DependentUpon>Splashscreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainForm.resx">
+      <DependentUpon>mainForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="staffUserControl.resx">
+      <DependentUpon>staffUserControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemberUserControl.resx">
+      <DependentUpon>MemberUserControl.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Scripts\bower.json" />
+    <None Include="Scripts\build.log" />
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="packages\Microsoft.CodeAnalysis.Analyzers.3.0.0\analyzers\dotnet\vb\Microsoft.CodeAnalysis.Analyzers.dll" />
+    <Analyzer Include="packages\Microsoft.CodeAnalysis.Analyzers.3.0.0\analyzers\dotnet\vb\Microsoft.CodeAnalysis.VisualBasic.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Scripts\typings\animation-frame\index.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money_25px.png" />
+    <Content Include="icons8_dumbbell.ico" />
+    <Content Include="VbProjectDatabase.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="VbProjectDatabase_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>VbProjectDatabase.mdf</DependentUpon>
+    </Content>
+    <None Include="Resources\search_25px.png" />
+    <None Include="Resources\delete_25px.png" />
+    <None Include="Resources\add_25px.png" />
+    <None Include="Resources\add_to_inbox_25px.png" />
+    <None Include="Resources\add_user_group_25px.png" />
+    <None Include="Resources\address_25px.png" />
+    <None Include="Resources\address_book_25px.png" />
+    <None Include="Resources\admin_settings_male_25px.png" />
+    <None Include="Resources\airport_25px.png" />
+    <None Include="Resources\alarm_clock_25px.png" />
+    <None Include="Resources\america_filled_25px.png" />
+    <None Include="Resources\arena_25px.png" />
+    <None Include="Resources\attach_25px.png" />
+    <None Include="Resources\back_25px.png" />
+    <None Include="Resources\bank_cards_25px.png" />
+    <None Include="Resources\banknotes_25px.png" />
+    <None Include="Resources\bed_25px.png" />
+    <None Include="Resources\bill_25px.png" />
+    <None Include="Resources\blueprint_25px.png" />
+    <None Include="Resources\bluetooth2_25px.png" />
+    <None Include="Resources\bookmark_ribbon_25px.png" />
+    <None Include="Resources\bullet_camera_25px.png" />
+    <None Include="Resources\bullet_camera_filled_25px.png" />
+    <None Include="Resources\bullish_25px.png" />
+    <None Include="Resources\calendar_25px.png" />
+    <None Include="Resources\camera_25px.png" />
+    <None Include="Resources\cancel_25px.png" />
+    <None Include="Resources\card_in_use_25px.png" />
+    <None Include="Resources\charge_battery_25px.png" />
+    <None Include="Resources\check_in_desk_25px.png" />
+    <None Include="Resources\checked_25px.png" />
+    <None Include="Resources\checkmark_25px.png" />
+    <None Include="Resources\chrome_25px.png" />
+    <None Include="Resources\code_25px.png" />
+    <None Include="Resources\coins_25px.png" />
+    <None Include="Resources\conference_call_25px.png" />
+    <None Include="Resources\contacts_25px.png" />
+    <None Include="Resources\courses_filled_25px.png" />
+    <None Include="Resources\cycling_road_filled_25px.png" />
+    <None Include="Resources\delete_25px1.png" />
+    <None Include="Resources\delete_sign_25px.png" />
+    <None Include="Resources\delete_sign_filled_25px.png" />
+    <None Include="Resources\delivery_25px.png" />
+    <None Include="Resources\diploma_25px.png" />
+    <None Include="Resources\dog_house_25px.png" />
+    <None Include="Resources\door_opened_filled_25px.png" />
+    <None Include="Resources\edit_25px.png" />
+    <None Include="Resources\edit_file_25px.png" />
+    <None Include="Resources\education_25px.png" />
+    <None Include="Resources\email_25px.png" />
+    <None Include="Resources\enter_25px.png" />
+    <None Include="Resources\exhibitor_25px.png" />
+    <None Include="Resources\export_25px.png" />
+    <None Include="Resources\facebook_25px.png" />
+    <None Include="Resources\facebook_circled_25px.png" />
+    <None Include="Resources\facebook_messenger_25px.png" />
+    <None Include="Resources\film_25px.png" />
+    <None Include="Resources\fingerprint_25px.png" />
+    <None Include="Resources\flex_biceps_25px.png" />
+    <None Include="Resources\folder_invoices_25px.png" />
+    <None Include="Resources\forward_25px.png" />
+    <None Include="Resources\globe_filled_25px.png" />
+    <None Include="Resources\google_plus_25px.png" />
+    <None Include="Resources\handle_with_care_25px.png" />
+    <None Include="Resources\home_filled_25px.png" />
+    <None Include="Resources\home_page_25px.png" />
+    <None Include="Resources\imac_filled_25px.png" />
+    <None Include="Resources\inbox_25px.png" />
+    <None Include="Resources\internet_25px.png" />
+    <None Include="Resources\internet_filled_25px.png" />
+    <None Include="Resources\laptop_25px.png" />
+    <None Include="Resources\left_25px.png" />
+    <None Include="Resources\link_25px.png" />
+    <None Include="Resources\literature_25px.png" />
+    <None Include="Resources\living_room_25px.png" />
+    <None Include="Resources\location_25px.png" />
+    <None Include="Resources\lock_2_25px.png" />
+    <None Include="Resources\long_arrow_left_filled_25px.png" />
+    <None Include="Resources\mac_os_25px.png" />
+    <None Include="Resources\macbook_25px.png" />
+    <None Include="Resources\mail_25px.png" />
+    <None Include="Resources\menu_25px.png" />
+    <None Include="Resources\message_group_25px.png" />
+    <None Include="Resources\microsoft_admin_filled_25px.png" />
+    <None Include="Resources\more_25px.png" />
+    <None Include="Resources\movie_25px.png" />
+    <None Include="Resources\ms_edge_25px.png" />
+    <None Include="Resources\museum_25px.png" />
+    <None Include="Resources\musical_notes_25px.png" />
+    <None Include="Resources\new_post_25px.png" />
+    <None Include="Resources\note_25px.png" />
+    <None Include="Resources\ok_message_25px.png" />
+    <None Include="Resources\opened_folder_25px.png" />
+    <None Include="Resources\org_unit_25px.png" />
+    <None Include="Resources\phone_25px.png" />
+    <None Include="Resources\physics_25px.png" />
+    <None Include="Resources\picture_25px.png" />
+    <None Include="Resources\planner_25px.png" />
+    <None Include="Resources\play_25px.png" />
+    <None Include="Resources\present_25px.png" />
+    <None Include="Resources\price_tag_25px.png" />
+    <None Include="Resources\pricing_structure_25px.png" />
+    <None Include="Resources\processor_25px.png" />
+    <None Include="Resources\read_message_25px.png" />
+    <None Include="Resources\report_card_25px.png" />
+    <None Include="Resources\request_service_25px.png" />
+    <None Include="Resources\residence_25px.png" />
+    <None Include="Resources\return_25px.png" />
+    <None Include="Resources\right_25px.png" />
+    <None Include="Resources\right2_25px.png" />
+    <None Include="Resources\ringer_volume_25px.png" />
+    <None Include="Resources\ringer_volume_filled_25px.png" />
+    <None Include="Resources\save_as_25px.png" />
+    <None Include="Resources\school_25px.png" />
+    <None Include="Resources\screenshot_25px.png" />
+    <None Include="Resources\search_25px1.png" />
+    <None Include="Resources\send_file_25px.png" />
+    <None Include="Resources\sent_25px.png" />
+    <None Include="Resources\shield_25px.png" />
+    <None Include="Resources\shopping_cart_25px.png" />
+    <None Include="Resources\source_code_25px.png" />
+    <None Include="Resources\source_code_filled_25px.png" />
+    <None Include="Resources\start_25px.png" />
+    <None Include="Resources\tableware_25px.png" />
+    <None Include="Resources\task_25px.png" />
+    <None Include="Resources\theatre_mask_25px.png" />
+    <None Include="Resources\todo_list_25px.png" />
+    <None Include="Resources\touchscreen_smartphone_filled_25px.png" />
+    <None Include="Resources\tv_25px.png" />
+    <None Include="Resources\twitter_25px.png" />
+    <None Include="Resources\twitter_circled_filled_25px.png" />
+    <None Include="Resources\unit_25px.png" />
+    <None Include="Resources\update_file_25px.png" />
+    <None Include="Resources\upload_to_cloud_25px.png" />
+    <None Include="Resources\usb_memory_stick_filled_25px.png" />
+    <None Include="Resources\user_25px.png" />
+    <None Include="Resources\user_male_circle_25px.png" />
+    <None Include="Resources\user_male_circle_filled_25px.png" />
+    <None Include="Resources\volleyball_25px.png" />
+    <None Include="Resources\waste_25px.png" />
+    <None Include="Resources\water_25px.png" />
+    <None Include="Resources\whatsapp_25px.png" />
+    <None Include="Resources\workstation_25px.png" />
+    <None Include="Resources\workstation_filled_25px.png" />
+    <None Include="Resources\world_map_25px.png" />
+    <None Include="Resources\youtube_play_25px.png" />
+    <None Include="Resources\book_shelf_25px.png" />
+    <None Include="Resources\school_25px1.png" />
+    <None Include="Resources\instagram_25px.png" />
+    <None Include="Resources\book_shelf_25px1.png" />
+    <Content Include="Scripts\LICENSE.txt" />
+    <Content Include="Scripts\polymer-micro.html" />
+    <Content Include="Scripts\polymer-mini.html" />
+    <Content Include="Scripts\polymer.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Xamarin.Forms.3.4.0.1008975\build\Xamarin.Forms.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Xamarin.Forms.3.4.0.1008975\build\Xamarin.Forms.props'))" />
+    <Error Condition="!Exists('packages\Xamarin.Forms.3.4.0.1008975\build\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Xamarin.Forms.3.4.0.1008975\build\Xamarin.Forms.targets'))" />
+    <Error Condition="!Exists('packages\Microsoft.CodeAnalysis.Analyzers.3.0.0\build\Microsoft.CodeAnalysis.Analyzers.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeAnalysis.Analyzers.3.0.0\build\Microsoft.CodeAnalysis.Analyzers.props'))" />
+    <Error Condition="!Exists('packages\Microsoft.CodeAnalysis.Analyzers.3.0.0\build\Microsoft.CodeAnalysis.Analyzers.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeAnalysis.Analyzers.3.0.0\build\Microsoft.CodeAnalysis.Analyzers.targets'))" />
+  </Target>
+  <Import Project="packages\Xamarin.Forms.3.4.0.1008975\build\Xamarin.Forms.targets" Condition="Exists('packages\Xamarin.Forms.3.4.0.1008975\build\Xamarin.Forms.targets')" />
+  <Import Project="packages\Microsoft.CodeAnalysis.Analyzers.3.0.0\build\Microsoft.CodeAnalysis.Analyzers.targets" Condition="Exists('packages\Microsoft.CodeAnalysis.Analyzers.3.0.0\build\Microsoft.CodeAnalysis.Analyzers.targets')" />
+</Project>
